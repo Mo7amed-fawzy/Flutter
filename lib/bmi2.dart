@@ -1,10 +1,29 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class bmi2 extends StatelessWidget {
-  final int result;
+  final double result;
   final bool isMale;
   final int age;
+  // ignore: non_constant_identifier_names
+  String ShortResult() {
+    if (result >= 24.9) {
+      return 'Overweight';
+    } else if (result > 18.5) {
+      return 'normal';
+    } else {
+      return 'underweight';
+    }
+  }
+
+  String longRessult() {
+    if (result >= 24.9) {
+      return 'you have a hayer than normal body. try more عشان تخس وكدا';
+    } else if (result > 18.5) {
+      return 'You have a normal Body Weight. Good job';
+    } else {
+      return 'you have a lower than normal body . try more ';
+    }
+  }
 
   const bmi2({
     super.key,
@@ -17,7 +36,6 @@ class bmi2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color.fromARGB(221, 27, 26, 26),
-      //backgroundColor: const Color.fromARGB(221, 27, 26, 26),
       appBar: AppBar(
         backgroundColor: const Color.fromARGB(221, 27, 26, 26),
         leading: IconButton(
@@ -65,7 +83,7 @@ class bmi2 extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    'Result normal : $result',
+                    ShortResult(),
                     style: const TextStyle(
                       color: Colors.lightGreen,
                       fontWeight: FontWeight.bold,
@@ -77,7 +95,7 @@ class bmi2 extends StatelessWidget {
                     style: const TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
-                      fontSize: 18,
+                      fontSize: 25,
                     ),
                   ),
                   RichText(
@@ -101,9 +119,9 @@ class bmi2 extends StatelessWidget {
                       ],
                     ),
                   ),
-                  const Text(
-                    'You have a normal Body Weight. Good job',
-                    style: TextStyle(
+                  Text(
+                    longRessult(),
+                    style: const TextStyle(
                       color: Colors.lightGreen,
                       fontWeight: FontWeight.bold,
                       fontSize: 18,

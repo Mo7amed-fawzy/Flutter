@@ -15,9 +15,9 @@ class Bmi1 extends StatefulWidget {
 }
 
 class Bmi1State extends State<Bmi1> {
-  double height = 120;
-  int age = 5;
-  int weight = 30;
+  double height = 171;
+  int age = 21;
+  int weight = 65;
   bool isMale = true;
 
   @override
@@ -300,7 +300,7 @@ class Bmi1State extends State<Bmi1> {
                       child: MaterialButton(
                         //onPressed: () => Navigator.pushNamed(context, "/"),
                         onPressed: () {
-                          var result = weight /
+                          double result = weight /
                               pow(height / 100, 2); // ال 2 دي  يعني برفع اس 2
                           Navigator.push(
                             cxt,
@@ -308,7 +308,7 @@ class Bmi1State extends State<Bmi1> {
                               builder: (cxt) => bmi2(
                                 age: age,
                                 isMale: isMale,
-                                result: result.round(),
+                                result: result,
                               ),
                             ),
                           );
