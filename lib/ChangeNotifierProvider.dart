@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart'; //  استدعاء مكتبة provider بستعمل منها ChangeNotifierProvider
+//  استدعاء مكتبة provider بستعمل منها ChangeNotifierProvider
 
 class MyAppProvider extends ChangeNotifier {
   double height = 171;
@@ -9,14 +9,14 @@ class MyAppProvider extends ChangeNotifier {
   bool iFemal = true;
 
   void updateIsMale(bool newValue) {
-    bool isMale = true;
-    bool iFemal = false;
+    isMale = true;
+    iFemal = false;
     notifyListeners();
   }
 
   void updateIsFemale(bool newValue) {
-    bool isMale = false;
-    bool iFemal = true;
+    isMale = false;
+    iFemal = true;
     notifyListeners();
   }
 
