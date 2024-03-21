@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-//  استدعاء مكتبة provider بستعمل منها ChangeNotifierProvider
 
 class MyAppProvider extends ChangeNotifier {
   double height = 171;

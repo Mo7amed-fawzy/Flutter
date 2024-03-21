@@ -1,6 +1,7 @@
-import 'package:flutercoursetwo/MyPageScreen.dart';
+import 'package:flutercoursetwo/Last_Tasks/Task_14/BMI_using_provider/ChangeNotifierProvider.dart';
+import 'package:flutercoursetwo/Last_Tasks/Task_14/BMI_using_provider/MyPageScreen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutercoursetwo/ChangeNotifierProvider.dart';
+
 import 'package:provider/provider.dart';
 
 void main() {
